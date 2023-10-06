@@ -1,0 +1,115 @@
+﻿ <!-- Sidebar -->
+@{
+    var tam = ViewContext.RouteData.Values["area"]?.ToString();
+}
+<ul style="background-color:#2fb154; margin-top:73px;" class="nav-fixed z-index-99 navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <li class="d-flex align-items-center justify-content-between p-3 nav-item">
+        <b class="text-white">Tài khoản Admin</b>
+        <button id="sidebarToggleTop" class="btn d-md-none rounded-circle">
+            <i class="fa fa-bars"></i>
+        </button>
+    </li>
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <li class="nav-item">
+        <a asp-area="@tam" asp-controller=@string.Format("Home"+@tam) asp-action="Index" class="nav-link">
+            <i class="icon-sidebar fas fa-home"></i>
+            <span>Trang chủ</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Thông báo -->
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+            <i class="icon-sidebar fas fa-bell"></i>
+            <span>Thông báo</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Tiện ích -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Utilities"
+           aria-expanded="true" aria-controls="Utilities">
+            <i class="icon-sidebar fas fa-bookmark"></i>
+            <span>Tiện ích</span>
+        </a>
+        <div id="Utilities" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="buttons.html">Duyệt đơn đi muộn</a>
+                <a class="collapse-item" href="cards.html">Duyệt đơn xin nghỉ</a>
+                <a class="collapse-item" href="cards.html">Hướng dẫn sử dụng</a>
+            </div>
+        </div>
+    </li>
+        <!-- Nav Item - Thông tin admin -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#About"
+           aria-expanded="true" aria-controls="About">
+
+            <i class="icon-sidebar fas fa-user-graduate"></i>
+            <span>Thông tin admin</span>
+        </a>
+        <div id="About" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" asp-action="Index" asp-controller="AboutAdmin">Thông tin</a>
+                <a class="collapse-item" asp-area="" asp-action="ChangePass" asp-controller="BaseArea">Đổi mật khẩu</a>
+            </div>
+        </div>
+    </li>
+        <!-- Nav Item - Quản lý giáo viên -->
+    <li class="nav-item">
+        <a asp-area="Admin" asp-controller="TeacherManager" asp-action="Index" class="nav-link">
+            <i class="icon-sidebar fas fa-chalkboard-teacher"></i>
+            <span>Quản lý giáo viên</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Quản lý học sinh -->
+    <li class="nav-item">
+        <a asp-area="Admin" asp-controller="StudentManager" asp-action="Index" class="nav-link">
+            <i class="icon-sidebar fas fa-money-check-alt"></i>
+            <span>Quản lý học sinh</span>
+        </a>
+    </li>
+
+
+    <!-- Nav Item - Quản lý lớp học -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Class"
+           aria-expanded="true" aria-controls="Class">
+
+            <i class="icon-sidebar fas fa-calendar-alt"></i>
+            <span>Quản lý lớp học</span>
+        </a>
+        <div id="Class" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a asp-area="Admin" asp-controller="ClassManager" asp-action="Index" class="collapse-item">Danh sách lớp học</a>
+                <a class="collapse-item" href="cards.html">Lịch thi</a>
+            </div>
+        </div>
+    </li>
+    <!-- Nav Item - Quản lý môn học -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Subject"
+           aria-expanded="true" aria-controls="Subject">
+
+            <i class="icon-sidebar fas fa-calendar-alt"></i>
+            <span>Quản lý môn học</span>
+        </a>
+        <div id="Subject" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a asp-area="Admin" asp-controller="SubjectManager" asp-action="Index" class="collapse-item">Danh sách môn học</a>
+                <a class="collapse-item" href="cards.html">Lịch thi</a>
+            </div>
+        </div>
+    </li>
+
+   
+
+</ul>
+<!-- End of Sidebar -->

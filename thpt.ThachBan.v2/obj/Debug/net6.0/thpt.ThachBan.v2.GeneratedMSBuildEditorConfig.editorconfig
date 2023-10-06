@@ -1,0 +1,169 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = thpt.ThachBan.v2
+build_property.RootNamespace = thpt.ThachBan.v2
+build_property.ProjectDir = C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.v2\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.v2
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/AboutAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRBZG1pblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/ClassManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/ClassManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/ClassManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/HomeAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/ScheduleManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2NoZWR1bGVNYW5hZ2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/StudentManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudE1hbmFnZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/StudentManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudE1hbmFnZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/StudentManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudE1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/SubjectManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViamVjdE1hbmFnZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/SubjectManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViamVjdE1hbmFnZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/SubjectManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViamVjdE1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/TeacherManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlck1hbmFnZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/TeacherManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlck1hbmFnZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Admin/Views/TeacherManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlck1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Student/Views/AboutStudent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBYm91dFN0dWRlbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/GetResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxHZXRSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/GetResultByGrade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxHZXRSZXN1bHRCeUdyYWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/InforClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxJbmZvckNsYXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/InforLeaderOfClass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxJbmZvckxlYWRlck9mQ2xhc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Student/Views/HomeStudent/ViewSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xIb21lU3R1ZGVudFxWaWV3U2NoZWR1bGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Teacher/Views/AboutTeacher/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xBYm91dFRlYWNoZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Areas/Teacher/Views/HomeTeacher/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xIb21lVGVhY2hlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/BaseArea/ChangePass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZUFyZWFcQ2hhbmdlUGFzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Login/ComfirmForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ29tZmlybUZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Login/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Shared/PartialView/SidebarAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3XFNpZGViYXJBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Shared/PartialView/SidebarStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3XFNpZGViYXJTdHVkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Shared/PartialView/SidebarTeacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3XFNpZGViYXJUZWFjaGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/chu van chien/Desktop/DATN/thpt.ThachBan.v2-main/thpt.ThachBan.v2-main/thpt.ThachBan.v2/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-th5wsjabz0

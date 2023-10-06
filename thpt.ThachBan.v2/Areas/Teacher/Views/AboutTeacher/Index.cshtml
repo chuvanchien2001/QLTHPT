@@ -1,0 +1,220 @@
+﻿@model thpt.ThachBan.DTO.ViewModels.Areas.Common.AboutEmployeePage
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="content-wrapper" class="content-main d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 d-md-none static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        <div class="container-fluid">
+            <hr />
+            <h4 class="mb-4">Thông tin cá nhân</h4>
+            <hr />
+            <table class="table-borderless">
+                <tbody>
+                    <tr>
+                        <td class="col-8 p-0">
+                            Mã nhân viên
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Employee.EmployeeCode)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Họ tên nhân viên
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Employee.EmployeeName)
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Giới tính
+                        </td>
+                        @if (Model.Employee.Gender == 0)
+                        {
+                            <td>
+                                Nữ
+                            </td>
+                        }
+                        else if (Model.Employee.Gender == 1)
+                        {
+                            <td>
+                                Nam
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                Khác
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <td>
+                            Ngày sinh
+
+                        </td>
+                        <td>
+                            @Model.Employee.DateOfBirth.ToString("dd/MM/yyyy")
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Nơi sinh
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Employee.PlaceOfBirth)
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Dân tộc
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Employee.Nation)
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Địa chỉ
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(model => model.Employee.Address)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ngày bắt đầu làm việc
+                        </td>
+                        <td>
+
+                            @Model.Employee.WorkStarted.ToString("dd/MM/yyyy")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ngày kết thúc hợp đồng làm việc
+                        </td>
+                        <td>
+
+                            @Model.Employee.WorkEnded.ToString("dd/MM/yyyy")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(model => model.Employee.Email)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Số điện thoại
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(model => model.Employee.PhoneNumber)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <h4 class="mb-4">Thông tin công tác</h4>
+            <hr />
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        Các lớp học chủ nhiệm
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Classes.Count == 0)
+                    {
+                        <tr>Không có dữ liệu</tr>
+                    }
+                    else
+                    {
+                        foreach (var item in Model.Classes)
+                        {
+                            <tr>@item.ClassName </tr>
+
+                        }
+                    }
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        Phòng ban trực thuộc
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Departments.Count == 0)
+                    {
+                        <tr>
+                            <td>Không có dữ liệu</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            @foreach (var item in Model.Departments)
+                            {
+                                <td>@item.DepartmentName </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        Chuyên môn
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Employee.Subject.Count == 0)
+                    {
+                        <tr><td>Không có dữ liệu</td></tr>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model.Subjects)
+                        {
+
+                            <tr>
+                                <td>@item.SubjectName </td>
+                            </tr>
+
+                        }
+                    }
+                </tbody>
+            </table>
+            <hr />
+        </div>
+        @*        <div>
+        <a asp-action="Edit" asp-route-id="@Model?.AccountId">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+        </div>*@
+
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="content-wrapper" class="content-main d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 d-md-none static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        <div class="container-fluid">
+            <hr />
+            <h4 class="mb-4">Thông tin cá nhân</h4>
+            <hr />
+            <form action="~/BaseArea/ChangePassPost" method="post">
+                <table class="table-borderless">
+                    <tbody>
+                        <tr>
+                                    <td class="col-8 p-0">Nhập mật khẩu cũ</td>
+                            <td><input type="password" id="passOld" name="passOld" required class="form-control" /></td>
+                        </tr>
+                        <tr>
+                                    <td class="col-8 p-0">Nhập mật khẩu mới</td>
+                            <td><input type="password" id="pass" name="pass" required class="form-control" /></td>
+                        </tr>
+                        <tr>
+                                    <td class="col-8 p-0">Xác nhận mật khẩu</td>
+                            <td><input type="password" id="comfirmpass" name="comfirmpass" required class="form-control" /></td>
+                        </tr>
+                        @{
+                            string? success = (string?)ViewData["success"];
+                            if (success != null)
+                            {
+                                <span class="field-validation-error text-success" role="alert">@ViewBag.success</span>
+                            }
+                            string? error = (string?)ViewData["error"];
+                            if (error != null)
+                            {
+                                <span class="field-validation-error text-danger" role="alert">@ViewBag.error</span>
+                            }
+                        }
+                    </tbody>
+                </table>
+                <hr />
+                             <div class="d-flex justify-content-center">
+                <button class="btn btn-success" id="submitData">Lưu</button>
+                <span style="width: 50px;"></span>
+            </div>
+                <!-- Submit button -->
+            </form>
+
+        </div>
+    </div>
+</div>

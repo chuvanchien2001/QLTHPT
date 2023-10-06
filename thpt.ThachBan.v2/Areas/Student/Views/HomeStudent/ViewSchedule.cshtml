@@ -1,0 +1,185 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .form-check:hover {
+        background-color: yellowgreen;
+    }
+</style>
+<div id="content-wrapper" class="content-main d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 d-md-none static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        <div class="container-fluid">
+            <hr />
+            <h4 class="mb-4">Tạo thời khóa biểu</h4>
+            <hr />
+            <input hidden type="text" id="ClassId" value="@TempData["ClassId"]" />
+            <input hidden type="text" id="Grade" value="@TempData["Grade"]" />
+            <h3>Lớp @TempData["ClassName"]</h3>
+            <table class="table table-bordered">
+                <thead>
+                <td>Tiết</td>
+                <td>Thứ 2</td>
+                <td>Thứ 3</td>
+                <td>Thứ 4</td>
+                <td>Thứ 5</td>
+                <td>Thứ 6</td>
+                <td>Thứ 7</td>
+                </thead>
+                <tbody id="render">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+
+    $(document).ready(function () {
+
+        var listBgColor = ["#e0ff65", "#F5F5F5", "#CCCCCC", "#E6E6E6", "#B3B3B3", "#FFCCCC", "#FF9999", "#FF6666", "#FF3333", "#FF0000", "#e0ff65", "#e0ff65", "#6c8fff"];
+
+        var listSubject = [];
+        var listSubjectSelected = [];
+        var ListSelected = [];
+        var grade = $("#Grade").val();
+
+
+        async function getSubject() {
+            var datapost = {
+                guids: listSubjectSelected,
+                classId: $("#ClassId").val()
+            };
+            const data2 = await
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("loadSubjectOfClass","ScheduleManager")',
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: "json",
+                    data: JSON.stringify(datapost),
+                    success: function (data) {
+                        listSubject = data;//mã, tên,
+                        console.log(listSubject);
+                        for (let i = 0; i < 5; i++) {
+                            ListSelected.push([]);
+                            for (let j = 0; j < 6; j++) {
+                                ListSelected[i].push({ val: null, flag: 0, pos: -1 });
+                            }
+                        }
+                        for (let i = 0; i < listSubject.length; i++) {
+                            for (let j = 0; j < listSubject[i].x.length; j++) {
+                                ListSelected[listSubject[i].y[j]][listSubject[i].x[j]].val = listSubject[i].id;
+                                ListSelected[listSubject[i].y[j]][listSubject[i].x[j]].flag = 1;
+                            }
+                            ListSelected.push([]);
+                            for (let j = 0; j < 6; j++) {
+                                ListSelected[i].push({ val: null, flag: 0, pos: -1 });
+                            }
+                        }
+
+                        renderTable(listSubject);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log('Error creating employee: ' + textStatus);
+                    }
+                })
+        };
+        getSubject();
+
+        function renderTable(listSubject) {
+
+
+            for (let i = 0; i < 5; i++) {
+                let row = $("<tr></tr>");
+                $("<td>" + (i + 1) + "</td>").appendTo(row);
+                for (let j = 0; j < 6; j++) {
+                    // bỏ tiết 1 thứ 2 và tiết 5 thứ 7
+                    if (i == 0 && j == 0) {
+                        let col = $("<td>Chào cờ</td>");
+                        col.appendTo(row);
+                        continue;
+                    }
+                    else if (i == 4 && j == 5) {
+                        let col = $("<td>Sinh hoạt lớp</td>");
+                        col.appendTo(row);
+                        continue;
+                    }
+                    let col = $("<td></td>");
+                    // nếu ô đã đưuọc set tiết học
+                    if (ListSelected[i][j].flag == 1) {
+                        //console.log(ListSelected[i][j])
+                        let select = $('<div id="select_' + i + '_' + j + '" class="select_subject form-control flex-grow-0 w-auto"></div>');
+
+                        var index;
+                        for (let z = 0; z < listSubject.length; z++) {
+                            if (listSubject[z].id == ListSelected[i][j].val) {
+                                $('<div selected="selected" value=' + listSubject[z].id + '>' + listSubject[z].name   + '</div>').appendTo(select);
+                                index = z;
+                            }
+                            else if (listSubject[z].sl == 0) {
+                                $('<div class="d-none" value=' + listSubject[z].id + '>' + listSubject[z].name   + '</div>').appendTo(select);
+                            } else {
+                                $('<div value=' + listSubject[z].id + '>' + listSubject[z].name   + '</div>').appendTo(select);
+                            }
+                        }
+                        select.appendTo(col);
+                        col.appendTo(row);
+
+                        continue;
+                    }
+                    // nếu ô chưa được set tiết học
+                    let select = $("<div></div>")
+                    select.appendTo(col);
+                    col.appendTo(row);
+
+                }
+
+                row.appendTo($("#render"));
+
+            }
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 6; j++) {
+                    $('#select_' + i + '_' + j).on("change", function () {
+                        var index = $(this).prop('selectedIndex') - 1;
+                        if (index != -1) {
+                            listSubject[index].sl--;
+                            ListSelected[i][j].flag = 1;
+                            ListSelected[i][j].val = listSubject[index].id;
+                            ListSelected[i][j].pos = index;
+                        }
+                        if (index == -1) {
+                            index = ListSelected[i][j].pos;
+                            listSubject[index].sl++;
+                            ListSelected[i][j].flag = 1;
+                            ListSelected[i][j].val = "";
+                            ListSelected[i][j].pos = -1;
+                        }
+                        $("#render").html("");
+
+                        renderTable(listSubject);
+
+
+
+                        // thêm vị trí đã chọn vào 1 ds
+
+                    })
+                }
+            }
+        }
+
+
+
+    });
+
+
+</script>
+

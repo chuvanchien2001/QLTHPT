@@ -1,0 +1,198 @@
+﻿@model List<thpt.ThachBan.DTO.Models.Student>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- Modal -->
+<div id="content-wrapper" class="content-main d-flex flex-column" style="height: calc(100% - 76px);">
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 d-md-none static-top shadow">
+
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+        </button>
+    </nav>
+    <!-- Main Content -->
+    <div id="content">
+        <div class="p-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <h1 class="d-inline">Danh sách học sinh</h1>
+
+                <a class="btn btn-outline-success h-100" asp-area="Admin" asp-controller="StudentManager" asp-action="Create">Tạo mới</a>
+
+            </div>
+            <form id="formListStudent" action="" method="get">
+
+                <div class="input-group mb-3">
+                    @Html.DropDownList("OrderBy", new SelectList(
+                        new Dictionary<int,string>(){ 
+                            {0,"Mã học sinh"}, 
+                            {1,"Mới nhất"}, 
+                            {2,"Họ tên"} },
+                    "Key", "Value",@TempData["OrderBy"]),"--Sắp xếp--",
+                    htmlAttributes: new { @class = "form-select flex-grow-0 w-auto" })
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    @Html.DropDownList("Status", new SelectList(
+                        new Dictionary<int,string>(){ 
+                            {0,"Nghỉ học"}, 
+                            {1,"Đang học"}},
+                    "Key", "Value",@TempData["Status"]),"--Trạng thái--",
+                    htmlAttributes: new { @class = "form-select flex-grow-0 w-auto" })
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input id="CodeSearch" name="CodeSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Mã" value="@TempData["CodeSearch"]">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input id="NameSearch" name="NameSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Họ tên" value="@TempData["NameSearch"]">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <input id="ClassSearch" name="ClassSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Lớp" value="@TempData["ClassSearch"]">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <input id="StudentTaskSearch" name="StudentTaskSearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Chức vụ" value="@TempData["TaskSearch"]">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <input id="SocialPolicySearch" name="SocialPolicySearch" type="text" class="form-control flex-grow-0 w-auto" placeholder="Học bổng" value="@TempData["PolicyName"]">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>Mã</td>
+                        <td>Họ tên</td>
+                        <td>Lớp</td>
+                        <td>Chức vụ</td>
+                        <td>Học bổng</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count==0)
+                    {
+                        <h3 class="text-center">Không có dữ liệu</h3>
+                    }
+                    else
+                    {                        
+                        @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <td>@Model[i].StudentCode</td>
+                            <td>@Model[i].StudentName</td>
+                            <td>@Model[i].Class?.ClassName</td>
+                            <td>@Model[i].StudentTask?.StudentTaskName</td>
+                            <td>@Model[i].SocialPolicy?.SocialPolicyName</td>
+                            <td>
+                                @Html.ActionLink("Xem chi tiết", "Edit", new { id =@Model[i].StudentId}, new { @class = "btn btn-light" })
+                                @if (ViewBag.Status == 1)
+                                {
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal_@i">
+                                        Nghỉ
+                                    </button>
+                                    <div class="modal fade" id="modal_@i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Bạn có muốn chuyển trạng thái của học sinh </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Mã học sinh: @Model[i].StudentCode</p>
+                                                    <p>Họ tên học sinh: @Model[i].StudentName</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    @Html.ActionLink("Nghỉ", "Index", new { id =@Model[i].StudentId }, new { @class = "btn btn-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }else{
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal_@i">
+                                        Xóa
+                                    </button>
+                                    <div class="modal fade" id="modal_@i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Bạn có muốn chuyển trạng thái của học sinh </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Mã học sinh: @Model[i].StudentCode</p>
+                                                    <p>Họ tên học sinh: @Model[i].StudentName</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <input id="id_post_@i" type="text" hidden value="@Model[i].StudentId"/>
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button id="btn_post_@i" type="button" class="btn btn-danger btn_post" data-bs-dismiss="modal">Xóa</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                }
+                            </td>
+
+                        </tr>
+                    }
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="d-inline-flex w-100 justify-content-center">
+        <input min="1" max="@ViewBag.pageSize" type="number" id="changePaging" class="form-control" style="width: 80px;" value="@ViewBag.pageCurrent"><span style="font-size: 27px;">/@ViewBag.pageSize</span>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#changePaging').focus();
+        $("#changePaging").on("change",function(){
+            window.location.href = "/Admin/StudentManager?pageCurrent="+$("#changePaging").val()+ "&OrderBy=" + $("#OrderBy").val()+ "&Status=" + $("#Status").val()  + "&CodeSearch=" + $("#CodeSearch").val() + "&NameSearch=" + $("#NameSearch").val() + "&ClassSearch=" + $("#ClassSearch").val() + "&StudentTaskSearch=" + $("#StudentTaskSearch").val() + "&SocialPolicySearch=" + $("#SocialPolicySearch").val();        });
+        var btn_posts = $('.btn_post');
+        for(let i=0;i<btn_posts.length;i++){
+            $('#btn_post_'+i).on("click",function(){
+                var tam = $('#id_post_'+i).val();
+                console.log(tam);
+                $.ajax({
+                    url: '@Url.Action("Delete","StudentManager")?id=' + $('#id_post_'+i).val(),
+                    type: 'POST',
+                    success: function (data) {
+                        if (data.status == 200) {
+                            alert("Cập nhật thông tin thành công!");
+                            $('#formListStudent').submit();
+                        }
+                        else if (data.status == 501) {
+                            alert(data.message + tam);
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log('Error creating employee: ' + textStatus + tam);
+
+                    }
+                })
+
+            })
+        }
+        $('#OrderBy').on('change', function () {
+            $('#formListStudent').submit();
+        }); 
+        $('#Status').on('change', function () {
+            $('#formListStudent').submit();
+        });
+        //async function submitDelete(tam) {
+        //    const data = await
+
+        //}
+    });
+</script>

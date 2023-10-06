@@ -1,0 +1,58 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+}
+
+
+.bg-main {
+    background-color: #54c988;
+}
+.bg-main-1 {
+    background-color: #276937;
+}
+.color-main {
+    color: #646464!important;
+}
+.color-main-1 {
+    color: #b0b0b0!important;
+}
+.bg-nav-main {
+    background-color: #f5f5f5!important;
+}
+nav a{
+    color: white!important;
+}
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.z-index-100 {
+    z-index: 100;
+}
+.z-index-99 {
+    z-index: 99;
+}
+@media screen and (min-width: 768px) {
+    .content-main {
+        margin-left: 240px;
+    }
+}
+.icon-sidebar {
+    width: 20px;
+    display: inline-block;
+}

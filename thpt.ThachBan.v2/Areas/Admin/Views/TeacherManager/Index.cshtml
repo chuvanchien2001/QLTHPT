@@ -1,0 +1,225 @@
+﻿@model List<thpt.ThachBan.DTO.ViewModels.Areas.Common.AboutEmployeePage>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div id="content-wrapper" class="content-main d-flex flex-column" style="height: calc(100% - 76px);">
+
+    <!-- Main Content -->
+    <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 d-md-none static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        <div class="p-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <h1>Danh sách giáo viên</h1>
+                <a class="btn btn-outline-success h-100" asp-area="Admin" asp-controller="TeacherManager" asp-action="Create">Tạo mới</a>
+            </div>
+            <form id="formListTeacher" action="" method="get">
+            
+            <div class="input-group mb-3">
+                    @Html.DropDownList("OrderBy", new SelectList(
+                        new Dictionary<int,string>(){ 
+                            {0,"Mã nhân viên"}, 
+                            {1,"Mới nhất"}, 
+                            {2,"Họ tên"} },
+                    "Key", "Value",@ViewBag.OrderBy),"--Sắp xếp--",
+                    htmlAttributes: new { @class = "form-select flex-grow-0 w-auto" })
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    @Html.DropDownList("Status", new SelectList(
+                    new Dictionary<int,string>(){
+                    {0,"Nghỉ"},
+                    {1,"Đang làm việc"}},
+                    "Key", "Value",@ViewBag.Status),"--Trạng thái--",
+                    htmlAttributes: new { @class = "form-select flex-grow-0 w-auto" })
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input name="CodeSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Mã" value="@ViewBag.CodeSearch">
+                <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input name="NameSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Tên" value="@ViewBag.NameSearch">
+                <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                    <input name="NumberPhoneSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Số điện thoại" value="@ViewBag.NumberPhoneSearch">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input name="ClassSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Lớp chủ nhiệm" value="@ViewBag.ClassSearch">
+                <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input name="SubjectSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Chuyên môn" value="@ViewBag.SubjectSearch">
+                <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>Mã</td>
+                        <td>Họ tên</td>
+                        <td>Số điện thoại</td>
+                        <td>Lớp chủ nhiệm</td>
+                        <td>Phòng ban</td>
+                        <td>Môn dạy</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count == 0)
+                    {
+                        <h3 class="text-center">Không có dữ liệu</h3>
+                    }
+                    else
+                    {
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            <tr>
+                                <td>@Model[i].Employee.EmployeeCode</td>
+                                <td>@Model[i].Employee.EmployeeName</td>
+                                <td>@Model[i].Employee.PhoneNumber</td>
+                                @if (Model[i].Classes.Count == 0)
+                                {
+                                    <td></td>
+                                }
+                                else
+                                {
+                                    List<string> LeaderOfClass = new List<string>();
+                                    for (int z = 0; z < @Model[i].Classes.Count; z++)
+                                    {
+                                        LeaderOfClass.Add(Model[i].Classes[z].ClassName);
+                                    }
+                                    <td style="max-width: 200px">
+                                        @String.Join(", ",LeaderOfClass)
+                                    </td>
+                                }
+                                @if (Model[i].Departments.Count == 0)
+                                {
+                                    <td></td>
+                                }
+                                else
+                                {
+                                    List<string> Departments = new List<string>();
+                                    for (int z = 0; z < @Model[i].Departments.Count; z++)
+                                    {
+                                        Departments.Add(Model[i].Departments[z].DepartmentName);
+                                    }
+                                    <td style="max-width: 200px">
+                                        @String.Join(", ",Departments)
+                                    </td>
+                                }
+                                @if (Model[i].Subjects.Count == 0)
+                                {
+                                    <td></td>
+                                }
+                                else
+                                {
+                                    List<string> Subjects = new List<string>();
+                                    for (int z = 0; z < @Model[i].Subjects.Count; z++)
+                                    {
+                                        Subjects.Add(Model[i].Subjects[z].SubjectName);
+                                    }
+                                    <td style="max-width: 200px">
+                                        @String.Join(", ",Subjects)
+                                    </td>
+                                }
+                                <td>
+                                    @Html.ActionLink("Xem chi tiết", "Edit", new { id =@Model[i].Employee.EmployeeId }, new { @class = "btn btn-light" })
+                                    
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal_@i">
+                                        Xóa
+                                    </button>
+                                    <div class="modal fade" id="modal_@i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Bạn có muốn chuyển trạng thái của giáo viên </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Mã giáo viên: @Model[i].Employee.EmployeeCode</p>
+                                                    <p>Họ tên giáo viên: @Model[i].Employee.EmployeeName</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <input id="id_post_@i" type="text" hidden value="@Model[i].Employee.EmployeeId" />
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button id="btn_post_@i" type="button" class="btn btn-danger btn_post" data-bs-dismiss="modal">Xóa</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @* @Html.ActionLink("Xóa", "Delete", new { id =@Model[i].Employee.EmployeeId }, new { @class = "btn btn-danger" }) *@
+                                </td>
+
+                            </tr>
+                        }
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="d-inline-flex w-100 justify-content-center">
+        @{
+
+            for (int i = 1; i <= ViewBag.pageSize; i++)
+            {
+                if (i == ViewBag.pageCurrent)
+                {
+                    <a href="@Url.Action("Index", new {pageCurrent = i})" class="d-inline-block btn btn-danger">@i</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Index",new {pageCurrent = i})" class="d-inline-block btn btn-dark">@i</a>
+
+                }
+
+            }
+        }
+
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var btn_posts = $('.btn_post');
+        for (let i = 0; i < btn_posts.length; i++) {
+            $('#btn_post_' + i).on("click", function () {
+                var tam = $('#id_post_' + i).val();
+                console.log(tam);
+                $.ajax({
+                    url: '@Url.Action("Delete","TeacherManager")?id=' + $('#id_post_' + i).val(),
+                    type: 'POST',
+                    success: function (data) {
+                        if (data.status == 200) {
+                            alert("Cập nhật thông tin thành công!");
+                            $('#formListTeacher').submit();
+                        }
+                        else if (data.status == 501) {
+                            alert(data.message + tam);
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log('Error creating employee: ' + textStatus + tam);
+
+                    }
+                })
+
+            })
+        }
+        $('#OrderBy').on('change', function () {
+            $('#formListTeacher').submit();
+        });
+        $('#Status').on('change', function () {
+            $('#formListTeacher').submit();
+        });
+    });
+</script>

@@ -1,0 +1,68 @@
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.deps.json
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.pdb
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DAL.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DAL.pdb
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.AssemblyReference.cache
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.AssemblyInfoInputs.cache
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.AssemblyInfo.cs
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.CoreCompileInputs.cache
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.CopyComplete
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\refint\thpt.ThachBan.BAL.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.pdb
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\ref\thpt.ThachBan.BAL.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.deps.json
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.pdb
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DAL.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DAL.pdb
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.AssemblyReference.cache
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.AssemblyInfoInputs.cache
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.AssemblyInfo.cs
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.CoreCompileInputs.cache
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.CopyComplete
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\refint\thpt.ThachBan.BAL.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.pdb
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.BAL\obj\Debug\net6.0\ref\thpt.ThachBan.BAL.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.deps.json
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.pdb
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DAL.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DAL.pdb
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.AssemblyReference.cache
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.AssemblyInfoInputs.cache
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.AssemblyInfo.cs
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.CoreCompileInputs.cache
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.CopyComplete
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\refint\thpt.ThachBan.BAL.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.pdb
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\ref\thpt.ThachBan.BAL.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.deps.json
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.BAL.pdb
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DAL.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DAL.pdb
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.AssemblyReference.cache
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.AssemblyInfoInputs.cache
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.AssemblyInfo.cs
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.CoreCompileInputs.cache
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.csproj.CopyComplete
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\refint\thpt.ThachBan.BAL.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\thpt.ThachBan.BAL.pdb
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.BAL\obj\Debug\net6.0\ref\thpt.ThachBan.BAL.dll

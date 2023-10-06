@@ -1,0 +1,94 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="~/lib/favicon.png">
+</head>
+<body class="vh-100 vw-100 bg-light d-flex" >
+    <div style="max-width: 1000px; padding: 50px; border: 5px solid #32c332;" class="d-flex m-auto bg-white rounded-3">
+        <div class="m-auto">
+                <!-- Pills navs -->
+                <!-- Pills content -->
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                        <form action="~/Login/LoginPost" method="post">
+                            <h3 class="text-center mb-4">Đăng nhập</h3>
+                            <!-- Logo -->
+                            <div class="d-flex mb-4">
+                                <img style="width:100px;" class="m-auto" src="~/Assets/Admin/Img/logoTHPT_thach_ban.png" alt="logo" />
+                            </div>
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="loginName">Tên đăng nhập</label>
+                            <input type="text" id="loginName" name="username" value="@ViewData["UserName"]" required class="form-control" />
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="loginPassword">Mật khẩu</label>
+                                <input type="password" id="loginPassword" name="password" required class="form-control" />
+                            @{
+                                string? mess = (string?)ViewData["ErrorNotFound"];
+                                if (mess != null)
+                                {
+                                    <span class="field-validation-error text-danger" role="alert">@ViewBag.ErrorNotFound</span>
+                                }
+
+                            }
+                            </div>
+
+                            <!-- 2 column grid layout -->
+                            <div class="mb-4">
+                                <div class="">
+                                    <!-- Simple link -->
+                                <b class="text-danger">Bạn quên mật khẩu? </b><a asp-controller="Login" asp-action="ForgotPassword">Forgot password?</a>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4 w-100">Đăng nhập</button>
+
+                        </form>
+                    </div>
+                </div>
+                </div>
+    </div>
+    @if (ViewBag.UpdatePasswordSuccess!=null)
+    {
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000" style="position: absolute; top: 1rem; right: 1rem;">
+            <div class="toast-header d-flex justify-content-between">
+                <h4>Thông báo</h4>
+            </div>
+            <div class="toast-body">
+                Cập nhật mật khẩu thành công
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Lấy phần tử có class là "toast"
+                var toast = document.querySelector(".toast");
+                // Thêm lớp "show" để hiển thị thông báo
+                toast.classList.add("show");
+                setTimeout(removeToastClass, 2000);
+            });
+            function removeToastClass() {
+                var toast = document.querySelector(".toast");
+                toast.classList.remove("show");
+            }
+        </script>
+    }
+    <!-- Pills content -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

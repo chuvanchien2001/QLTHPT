@@ -1,0 +1,165 @@
+﻿@model thpt.ThachBan.DTO.Models.Class
+@using Microsoft.AspNetCore.Mvc.Rendering
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .form-check:hover {
+        background-color: yellowgreen;
+    }
+</style>
+<div id="content-wrapper" class="content-main d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
+        <div class="container-fluid">
+            <hr />
+            <h4 class="mb-4">Thông tin lớp học</h4>
+            <hr />
+            <table class="table-borderless">
+                <tbody>
+                    <tr>
+                        <td style="width: 170px;" class="col-4 p-0">
+                            Tên lớp học
+                        </td>
+                        <td>
+                            <input type="text" id="ClassId" value="@Model.ClassId" hidden>
+                            <input type="text" class="form-control" id="ClassName" name="ClassName" value="@Model.ClassName" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Số thành viên trong lớp
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" id="NumOfMem" name="NumOfMem" value="@Model.NumOfMem" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Số chỗ ngồi
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" id="NumOfSeat" name="NumOfSeat" value="@Model.NumOfSeat" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Chủ nhiệm
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" value="@Model.Employee.EmployeeName" disabled>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Khối
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" value="@Model.Grade" disabled>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <h4 id="listStudent" class="mb-4">Danh sách học sinh trong lớp</h4>
+            <hr />
+            <select class="form-select flex-grow-0 w-auto" id="OrderBy" name="OrderBy">
+            </select>
+            <div style="height: 550px;">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>Mã</td>
+                            <td>Họ tên</td>
+                            <td>Giới tính</td>
+                            <td>Vị trí ngồi</td>
+                            <td>Chức vụ</td>
+                            @*<td></td>*@
+                        </tr>
+                    </thead>
+                    <tbody id="renderStudentOfClass">
+                    </tbody>
+                </table>
+            </div>
+            <div id="ClassManager"></div>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+        var pageCurrent = 1;
+
+
+        $('#OrderBy').on('change', function () {
+            $("#renderStudentOfClass").html("");
+            $("#ClassManager").html("");
+            getData();
+        });
+        function getData() {
+
+            const a = $.ajax({
+                type: 'POST',
+                data: {
+                    id: $("#ClassId").val(),
+                    OrderBy: $("#OrderBy").val(),
+                    pageCurrent: pageCurrent
+                },
+                url: '@Url.Action("loadStudentOfClass","ClassManager")',
+                success: function (data) {
+                    $("#renderStudentOfClass").html("");
+                    $("#ClassManager").html("");
+                    $("#OrderBy").html("");
+                    for (let i = 0; i < data.students.length; i++) {
+                        let row = $("<tr></tr>");
+                        var gioiTinh = data.students[i].gender == 0 ? "Nữ" : "Nam";
+                        $("<td>" + data.students[i].studentCode + "</td>").appendTo(row);
+                        $("<td>" + data.students[i].studentName + "</td>").appendTo(row);
+                        $("<td>" + gioiTinh + "</td>").appendTo(row);
+                        $("<td>" + data.students[i].codeOfSeat + "</td>").appendTo(row);
+                        $("<td>" + data.students[i].studentTask.studentTaskName + "</td>").appendTo(row);
+                        //$("<td>"
+                        //    + '<a class="btn btn-light" href = "/Admin/StudentManager/Edit/' + data.students[i].studentId + '" > Xem chi tiết</a>'
+                        //    + '<a class="btn btn-danger" href="/Admin/StudentManager/' + data.students[i].studentId + '">Xóa</a>' + "</td > ").appendTo(row);
+                        row.appendTo("#renderStudentOfClass");
+                    }
+                    let paging = $("<div class='d-inline-flex w-100 justify-content-center'></div>");
+                    for (let i = 1; i <= data.pageSize; i++) {
+                        if (data.pageCurrent == i) {
+                            $("<button id=btnPagingItem_" + i + " class= 'btn_paging d-inline-block btn btn-danger'>" + i + "</button>").appendTo(paging);
+                        } else {
+                            $("<button id=btnPagingItem_" + i + " class= 'btn_paging d-inline-block btn btn-dark'>" + i + "</button>").appendTo(paging);
+                        }
+                    }
+                    paging.appendTo("#ClassManager");
+                    if (data.orderBy == 0) {
+                        $('<option value="">--Sắp xếp--</option><option selected="selected" value="0">Tên học sinh</option><option value="1">Vị trí ngồi</option>').appendTo("#OrderBy");
+                    }
+                    if (data.orderBy == 1) {
+                        $('<option value="">--Sắp xếp--</option><option value="0">Tên học sinh</option><option selected="selected" value="1">Vị trí ngồi</option>').appendTo("#OrderBy");
+                    }
+                    for (let i = 1; i <= $(".btn_paging").length; i++) {
+                        $("#btnPagingItem_" + i).on("click", function () {
+                            pageCurrent = i;
+
+                            getData();
+                        })
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log('Error creating employee: ' + textStatus);
+                }
+            })
+        };
+        getData();
+    });
+
+
+</script>

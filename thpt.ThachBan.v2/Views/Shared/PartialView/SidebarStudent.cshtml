@@ -1,0 +1,93 @@
+﻿@{
+    var area = ViewContext.RouteData.Values["area"]?.ToString();
+}
+ <!-- Sidebar -->
+<ul style="background-color:#2fb154; margin-top:73px;" class="nav-fixed z-index-99 navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <li class="d-flex align-items-center justify-content-between p-3 nav-item">
+        <b class="text-white">Tài khoản học sinh</b>
+        <button id="sidebarToggleTop" class="btn d-md-none rounded-circle">
+            <i class="fa fa-bars"></i>
+        </button>
+    </li>
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <li class="nav-item">
+        <a asp-area="@area" asp-controller=@string.Format("Home"+@area) asp-action="Index" class="nav-link">
+            <i class="icon-sidebar fas fa-home"></i>
+            <span>Trang chủ</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Thông báo -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="icon-sidebar fas fa-bell"></i>
+            <span>Thông báo</span>
+        </a>
+    </li>
+
+
+    <!-- Nav Item - Thông tin học sinh -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#About"
+           aria-expanded="true" aria-controls="About">
+
+            <i class="icon-sidebar fas fa-user-graduate"></i>
+            <span>Thông tin học sinh</span>
+        </a>
+        <div id="About" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" asp-action="Index" asp-controller="AboutStudent">Thông tin</a>
+                <a class="collapse-item" asp-area="" asp-action="ChangePass" asp-controller="BaseArea">Đổi mật khẩu</a>
+            </div>
+        </div>
+    </li>
+
+
+    <!-- Nav Item - Thời khóa biểu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Schedule"
+           aria-expanded="true" aria-controls="Schedule">
+
+            <i class="icon-sidebar fas fa-calendar-alt"></i>
+            <span>Lịch</span>
+        </a>
+        <div id="Schedule" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" asp-area="Student" asp-action="ViewSchedule" asp-controller="HomeStudent">Thời khóa biểu</a>
+                @*<a class="collapse-item" href="cards.html">Lịch thi</a>*@
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Thông tin GVCN-->
+    <li class="nav-item">
+        <a hasp-area="Student" asp-action="GetLeaderOfClass" asp-controller="HomeStudent" class="nav-link">
+            <i class="icon-sidebar fas fa-diagnoses"></i>
+            <span>Thông tin GVCN</span>
+        </a>
+    </li>
+
+
+    <!-- Nav Item - Thông tin lớp học -->
+    <li class="nav-item">
+        <a asp-area="Student" asp-action="InforClass" asp-controller="HomeStudent" class="nav-link">
+                <i class="icon-sidebar fas fa-book"></i>
+            <span>Thông tin lớp học</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Xem điểm -->
+    <li class="nav-item">
+        <a asp-area="Student" asp-action="GetResult" asp-controller="HomeStudent" class="nav-link">
+                <i class="icon-sidebar far fa-file-alt"></i>
+            <span>Xem kết quả học tập</span>
+        </a>
+    </li>
+</ul>
+<!-- End of Sidebar -->

@@ -1,0 +1,108 @@
+﻿@model List<thpt.ThachBan.DTO.ViewModels.Areas.Admin.AboutClass>
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div id="content-wrapper" class="content-main d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 d-md-none static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        <div class="container-fluid">
+            <hr />
+            <h4 class="mb-4">Thông tin lớp học</h4>
+            <hr />
+            <form id="formListClass" action="" method="get">
+
+                <div class="input-group mb-3">
+                    @Html.DropDownList("Status", new SelectList(
+                    new Dictionary<int,string>(){
+                    {0,"Lớp đã đầy"},
+                    {1,"Lớp chưa đầy"}},
+                    "Key", "Value",@ViewBag.Status),"--Trạng thái--",
+                    htmlAttributes: new { @class = "form-select flex-grow-0 w-auto" })
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input name="ClassNameSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Tên" value="@ViewBag.ClassNameSearch">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input name="NumOfMemSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Số lượng thành viên" value="@ViewBag.NumOfMemSearch">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input name="NumOfSeatSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Số lượng chỗ ngồi" value="@ViewBag.NumOfSeatSearch">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input name="GradeSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Khối" value="@ViewBag.GradeSearch">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+
+                    <input name="EmployeeSearch" type="text" class="form-control flex-grow-0 w-auto searchInput" placeholder="Chủ nhiệm" value="@ViewBag.EmployeeSearch">
+                    <button type="submit" class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>Lớp</td>
+                        <td>Số lượng học sinh</td>
+                        <td>Số chỗ ngồi</td>
+                        <td>Khối</td>
+                        <td>Chủ nhiệm</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <td>@Model[i]._Class.ClassName</td>
+                            <td>@Model[i]._Class.NumOfMem</td>
+                            <td>@Model[i]._Class.NumOfSeat</td>
+                            <td>@Model[i]._Class.Grade</td>
+                            <td>@Model[i].EmployeeName</td>
+                            <td>@Html.ActionLink("Xem chi tiết", "Edit", new { id =@Model[i]._Class.ClassId}, new { @class = "btn btn-light" })
+                                @Html.ActionLink("Xóa", "Delete", new { id =@Model[i]._Class.ClassId }, new { @class = "btn btn-danger" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+   </div>
+    <div class="d-inline-flex w-100 justify-content-center">
+        @{
+
+            for (int i = 1; i <= ViewBag.pageSize; i++)
+            {
+                if (i == ViewBag.pageCurrent)
+                {
+                    <a href="@Url.Action("Index", new {pageCurrent = i})" class="d-inline-block btn btn-danger">@i</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Index",new {pageCurrent = i})" class="d-inline-block btn btn-dark">@i</a>
+
+                }
+
+            }
+        }
+
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#Status').on('change', function () {
+            $('#formListClass').submit();
+        });
+    });
+</script>

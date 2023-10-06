@@ -1,0 +1,191 @@
+﻿@model thpt.ThachBan.DTO.ViewModels.Areas.Student.AboutStudent
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="content-wrapper" class="content-main d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 d-md-none static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+        <div class="container-fluid">
+            <hr/>
+            <h4 class ="mb-4">Thông tin cá nhân</h4>
+            <hr />
+            <table class="table-borderless">
+                <tbody>
+                    <tr>
+                        <td class="col-8 p-0">
+                            Mã học sinh
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.student.StudentCode)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tên học sinh
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.student.StudentName)
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Giới tính
+                        </td>
+                        @if (Model.student.Gender == 0)
+                        {
+                            <td>Nữ</td>
+                        }else{
+                            <td>
+                                Nam
+                            </td>
+                        }
+                    </tr>
+                    <tr>
+                        <td>
+                            Ngày sinh
+                        </td>
+                        
+                        <td>
+                            @Model.student.DateOfBirth.ToString("dd/MM/yyyy")
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Nơi sinh
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.student.PlaceOfBirth)
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Địa chỉ
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.student.Address)
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Vị trí ngồi
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(model => model.student.CodeOfSeat)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Lớp
+                        </td>
+                        <td>
+
+                            @Html.DisplayFor(model => model.student.Class.ClassName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Chức vụ
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.student.StudentTask.StudentTaskName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Trợ cấp xã hội
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.student.SocialPolicy.SocialPolicyName) ( @Html.DisplayFor(model => model.student.SocialPolicy.ScholarshipLevel)% )
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <h4 class="mb-4">Thông tin liên hệ</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td class="col-1 p-0 text-center  p-3"></td>
+                            <td class="col-3 p-0 text-center">Mẹ</td>
+                            <td class="col-3 p-0 text-center">Cha</td>
+                            <td class="col-2 p-0 text-center">Người giám hộ</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">
+                                Họ tên
+                            </td>
+                            <td>
+                                @Model.mother.GuardianName
+                            </td>
+                            <td>
+                                @Model.father.GuardianName
+                            </td>
+                            <td>
+                                @Model.other.GuardianName
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">
+                                Nghề nghiệp
+                            </td>
+                            <td>
+                            @Model.mother.Career
+                            </td>
+                            <td>
+                            @Model.father.Career
+                            </td>
+                            <td>
+                            @Model.other.Career
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">
+                                Số điện thoại
+                            </td>
+                            <td>
+                            @Model.mother.PhoneNumber
+                            </td>
+                            <td>
+                                @Model.father.PhoneNumber
+                            </td>
+                            <td>
+                                @Model.other.PhoneNumber
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">
+                                Email
+                            </td>
+                            <td>
+                                @Model.mother.Email
+                            </td>
+                            <td>
+                                @Model.father.Email
+                            </td>
+                            <td>
+                                @Model.other.Email
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+
+    </div>
+</div>

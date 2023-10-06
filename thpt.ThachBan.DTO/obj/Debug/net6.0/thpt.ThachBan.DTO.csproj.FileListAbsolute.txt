@@ -1,0 +1,48 @@
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.deps.json
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.AssemblyReference.cache
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfoInputs.cache
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfo.cs
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\refint\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\Le Trung\Desktop\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\ref\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.deps.json
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.AssemblyReference.cache
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfoInputs.cache
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfo.cs
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\refint\thpt.ThachBan.DTO.dll
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\Le Trung\Desktop\New folder (2)\thpt.ThachBan.v2\thpt.ThachBan.DTO\obj\Debug\net6.0\ref\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.deps.json
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.AssemblyReference.cache
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfoInputs.cache
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfo.cs
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.CoreCompileInputs.cache
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\refint\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\chu van chien\Downloads\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\ref\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.deps.json
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\bin\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.AssemblyReference.cache
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfoInputs.cache
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.AssemblyInfo.cs
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.csproj.CoreCompileInputs.cache
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\refint\thpt.ThachBan.DTO.dll
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\thpt.ThachBan.DTO.pdb
+C:\Users\chu van chien\Desktop\DATN\thpt.ThachBan.v2-main\thpt.ThachBan.v2-main\thpt.ThachBan.DTO\obj\Debug\net6.0\ref\thpt.ThachBan.DTO.dll

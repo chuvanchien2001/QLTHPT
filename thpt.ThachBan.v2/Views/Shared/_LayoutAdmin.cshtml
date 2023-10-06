@@ -1,0 +1,93 @@
+﻿@using Newtonsoft.Json;
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@{
+    dynamic data = JsonConvert.DeserializeObject(HttpContextAccessor.HttpContext.Session.GetString("UserInfor"));
+    var tam = ViewContext.RouteData.Values["area"]?.ToString();
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trường THPT Thạch bàn - Cổng thông tin điện tử</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css?v=@DateTime.Now.Ticks" />
+    <link rel="icon" type="image/png" sizes="32x32" href="~/lib/favicon.png">
+    <!-- Custom fonts for this template-->
+    <link href="~/Assets/SB_Admin_2/vendor/fontawesome-free/css/all.min.css?v=@DateTime.Now.Ticks" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="~/Assets/SB_Admin_2/css/sb-admin-2.min.css?v=@DateTime.Now.Ticks" asp-append-version="true" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css?v=@DateTime.Now.Ticks" asp-append-version="true" />
+</head>
+<body>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <header style="padding-bottom: 76px;">
+        <nav style="background-color: #1f9d40;" class="nav-fixed z-index-100 border-0 navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow">
+            <div class="p-0 container-fluid">
+                @{
+                    string controllerName = "Home" + tam;
+                }
+                <a class="navbar-brand" asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index"><img style="width: 50px;" src="~/Assets/Admin/Img/logoTHPT_thach_ban.png" /></a>
+                <h5 class="d-none m-0 flex-grow-1 text-white d-sm-inline-flex justify-content-between">
+                    Cổng thông tin học sinh
+                </h5>
+                <ul class="navbar-nav ">
+                    <li class="dropdown">
+                        <a href="@Url.Action("")" class="nav-link float-right dropdown-toggle" data-toggle="dropdown">
+                            @data.AccountCode
+                        </a>
+                        <ul class="dropdown-menu position-absolute">
+                            <li>@Html.ActionLink("About", "Index", "AboutAdmin", null, new { @class = "dropdown-item text-black" })</li>
+                            <li><a class="dropdown-item text-black" asp-area="Teacher" asp-controller="HomeTeacher" asp-action="Index">Change Teacher</a></li>
+                            <li>@Html.ActionLink("Logout", "Logout","BaseArea", null, new { @class = "dropdown-item text-black" })</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-3">
+
+            <div id="page-top">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 d-md-none static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </nav>
+                <!-- Page Wrapper -->
+                <div style="margin-top: -3px;" id="wrapper">
+                    @Html.Partial("PartialView/SidebarAdmin")
+                </div>
+                <!-- End of Page Wrapper -->
+            </div>
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Assets/SB_Admin_2/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Assets/SB_Admin_2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/Assets/SB_Admin_2/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/Assets/SB_Admin_2/js/sb-admin-2.min.js?v=@DateTime.Now.Ticks"></script>
+
+    <!-- Page level plugins -->
+    <script src="~/Assets/SB_Admin_2/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/Assets/SB_Admin_2/js/demo/chart-area-demo.js?v=@DateTime.Now.Ticks"></script>
+    <script src="~/Assets/SB_Admin_2/js/demo/chart-pie-demo.js"></script>
+
+</body>
+</html>
